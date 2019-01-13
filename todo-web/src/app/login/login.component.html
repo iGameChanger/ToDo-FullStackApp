@@ -1,0 +1,4 @@
+<small *ngIf="isInvalid">Invalid Credentials</small>
+Username: <input type="text" id="username" name="username" [(ngModel)]="username"/>
+Password: <input type="password" id="password" name="password" [(ngModel)]="password"/>
+<button (click)="login()">Submit</button>
