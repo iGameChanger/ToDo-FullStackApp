@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
-import {HardcodedAuthenticationService} from '../service/hardcoded-authentication.service';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HardcodedAuthenticationService } from '../service/hardcoded-authentication.service';
 
 @Component({
     selector: 'app-login',
@@ -22,5 +22,11 @@ export class LoginComponent implements OnInit {
     login() {
         this.isInvalid = this.authenticationService.authenticate(this.username, this.password);
         this.router.navigate(['welcome', this.username]);
+    }
+
+    logout() {
+        sessionStorage.clear();
+        this.router.navigate(['']);
+
     }
 }
