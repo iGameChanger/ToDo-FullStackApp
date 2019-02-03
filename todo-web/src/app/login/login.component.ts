@@ -24,9 +24,4 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['welcome', this.username]);
     }
 
-    logout() {
-        sessionStorage.clear();
-        this.router.navigate(['']);
-
-    }
 }
